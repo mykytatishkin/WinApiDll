@@ -58,14 +58,13 @@ const int WM_CLOSE = 0x0010;
 /* Task 2*/
 
 Random rnd = new Random();
-const int MB_OK = (int)0x00000000L;
 const int MB_YESNO = (int)0x00000004L;
 int bot_answ = 0;
 
 do
 {
     bot_answ = rnd.Next(0,100);
-    var res = WinApiFunctions.MessageBox(IntPtr.Zero, $"Is {bot_answ} correct?", "Guess App", MB_OK | MB_YESNO);
+    var res = WinApiFunctions.MessageBox(IntPtr.Zero, $"Is {bot_answ} correct?", "Guess App", MB_YESNO);
     if (res == 6)
         return;
 }
