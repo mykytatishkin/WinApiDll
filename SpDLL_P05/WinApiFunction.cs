@@ -19,7 +19,7 @@ namespace SpDll_P05
     internal static class WinApiFunctions
 
     {
-
+        // Task 1
         [DllImport("User32.dll")]
 
         public static extern int MessageBox(IntPtr hWnd, string msg, string caption, int type);
@@ -46,13 +46,9 @@ namespace SpDll_P05
 
         public static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
-
-
         [DllImport("kernel32.dll")]
 
         public static extern bool Beep(int dwFreq, int dwDuration);
-
-
 
     }
 
